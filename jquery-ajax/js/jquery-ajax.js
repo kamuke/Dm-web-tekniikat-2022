@@ -9,9 +9,12 @@ $('#search-form').submit(function(e) {
     $.getJSON(url, function(shows) {
         console.log(shows);
         $.each(shows, function(i, show) {
-            console.log(show.show.name);
+            const name = show.show.name;
+            const img = show.show.image ? show.show.image.medium : "https://via.placeholder.com/210x295";
+            const summary = show.show.summary;
             const homesite = show.show.officialSite || show.show.url;
-            $('#search-result').append(`<a href="${homesite}">Kotisivu</a>`);
+            // const homesite = show.show.officialSite ? show.show.officialSite : show.show.url;
+            $('#search-result').append(`<article><img src="${img}"><h2>${name}</h2>${summary}<a href="${homesite}">Kotisivu</a></article>`);
         });
     });
 });
