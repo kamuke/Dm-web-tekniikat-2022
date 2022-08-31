@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV-sarjahaku</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.js" defer></script>
+    <script type="text/javascript" src="js/jquery-ajax.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>TV-sarjahakemisto</h1>
+    </header>
+    <main>
+        <section id="search-container">
+            <h2>Haku</h2>
+            <form id="search-form" action="https://api.tvmaze.com/search/shows">
+                <label for="search-input">Etsi TV-sarjoja:</label>
+                <input type="text" name="q" id="search-input" placeholder="Anna TV-sarja, esimerkiksi Golden girls">
+                <button type="submit">Hae</button>
+            </form>
+        </section>
+        <section id ="search-result">
+
+        </section>
+    </main>
+</body>
+
+</html>
