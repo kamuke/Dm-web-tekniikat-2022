@@ -1,5 +1,134 @@
-// Your variable overrides
-$body-bg: #000;
-$body-color: #111;
+// Fonts:
+@font-face {
+  font-family: 'Merriweather Sans';
+  src: url('../font/MerriweatherSans-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Merriweather Sans';
+  src: url('../font/MerriweatherSans-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../font/Merriweather-Regular.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../font/Merriweather-Bold.ttf');
+  font-weight: 700;
+}
+
+// Variable overrides:
+
+$font-family-sans-serif: 'Merriweather Sans', sans-serif !default;
+$font-family-base: $font-family-sans-serif !default;
+$font-size-base: 1.125rem !default;
+$lead-font-size: 1.25rem !default;
+$body-color: #212529;
+$primary: #0163ee;
+$light: #f8f9fa;
+$dark: #343a40;
+$btn-padding-x: 1.5rem;
+$btn-padding-y: 0.875rem;
+$btn-padding-x-sm: 1rem;
+$btn-padding-y-sm: 0.7rem;
+$btn-font-size: 0.875rem;
+$btn-font-size-sm: 0.8rem;
+$btn-border-width: 2px !default;
+$grid-gutter-width: 2rem !default;
+$navbar-light-color: $body-color;
+$navbar-light-hover-color: $primary;
+$h5-font-size: 1.15rem;
+$btn-box-shadow: 0 7px 16px 0 rgba(0, 0, 0, 0.2);
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+$box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .175) !default;
+
+html { font-size: $font-size-base; }
+
+.navbar {
+  .nav-link {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.875rem !important;
+  }
+}
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: "Merriweather", serif;
+  font-weight: 700 !important;
+}
+
+p { margin-bottom: 1.5rem !important; }
+
+.btn {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: $btn-box-shadow;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.link-cta {
+  border-bottom: 2px solid $primary;
+  color: $dark;
+  display: inline-block;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  padding-bottom: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.py-3 { padding: 1rem 0 !important; }
+
+.display-4 {
+  font-size: 3.25rem !important;
+  line-height: 1.3 !important;
+  font-weight: 300 !important;
+}
+
+.mx-n2 {
+  margin-right: -0.5rem !important;
+  margin-left: -0.5rem !important;
+}
+
+.bg-skew {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+    z-index: -1;
+  }
+}
+
+.bg-skew-light::before { background-color: $light; }
+
+.img-thumbnail {
+  padding: 0.5rem !important;
+  border: 0 !important;
+  background-color: $light;
+  box-shadow: $box-shadow;
+
+  &:hover {
+    box-shadow: $box-shadow-lg;
+  }
+}
+
 // Bootstrap and its default variables
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
