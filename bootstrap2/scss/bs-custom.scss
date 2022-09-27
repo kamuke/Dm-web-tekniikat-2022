@@ -1,0 +1,11 @@
+// Your variable overrides
+$body-bg: #f1f1f1;
+$primary: #713ea9;
+$card-border-radius: 1rem;
+$btn-border-radius: 0.5rem;
+$input-border-radius: 0.5rem;
+
+.card { overflow: hidden; }
+
+// Bootstrap and its default variables
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
