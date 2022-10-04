@@ -1,5 +1,10 @@
 <?php
 
+function customThemeSetup() {
+    add_theme_support('title-tag');
+    add_theme_support('custom-header', array('width' => 1320, 'height' => 700));
+}
+
 function registerMenu() {
     register_nav_menu('header-nav', 'Main nav to header');
 }
@@ -11,6 +16,7 @@ function addStylesAndScripts() {
     wp_enqueue_script('main-script', get_stylesheet_directory_uri() . '/js/main.js', ['jquery'], false, true);
 }
 
+add_action('init', 'customThemeSetup');
 add_action('init', 'registerMenu');
 add_action('wp_enqueue_scripts', 'addStylesAndScripts');
 
