@@ -2,7 +2,8 @@
 
 function customThemeSetup() {
     add_theme_support('title-tag');
-    add_theme_support('custom-header', array('width' => 1320, 'height' => 700));
+    add_theme_support('custom-header', array('width' => 1344, 'height' => 650));
+    add_theme_support('post-thumbnails');
 }
 
 function registerMenu() {

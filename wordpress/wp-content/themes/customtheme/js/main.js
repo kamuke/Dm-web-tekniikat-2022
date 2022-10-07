@@ -1,1 +1,1 @@
-jQuery('aside h2').html('Moikkelis koikkelis!');
+// jQuery('aside h2').html('Moikkelis koikkelis!');
