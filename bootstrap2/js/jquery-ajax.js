@@ -8,16 +8,16 @@ $.getJSON(featureQueryUrl, function(featureShows) {
     $.each(featureShows, function(i, featureShow) {
         $('.carousel-inner').prepend(
             `<article class="carousel-item ${i ? 0 : 'active'}">
-                <article class="card mb-3">
+                <article class="card mb-3 h-100">
                     <div class="row g-0">
-                        <div class="col-md-4">
+                        <div class="col-md-2">
                             <img src="${
                                 featureShow.show.image
                                     ? featureShow.show.image.original
                                     : 'https://static.tvmaze.com/images/no-img/no-img-portrait-text.png'
                             }" class="img-fluid rounded-start" alt="${featureShow.show.name}">
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-10">
                             <div class="card-body">
                                 <h3 class="card-title">${featureShow.show.name}</h3>
                                 <p class="card-text"><small class="text-muted">${featureShow.show.genres.join(' / ')}</small></p>

@@ -20,9 +20,10 @@
 // Your variable overrides
 $font-family-sans-serif: 'Work Sans', sans-serif !default;
 $font-family-base: $font-family-sans-serif !default;
+
 $primary: #D0FF26;
 $secondary: #e519c8;
-$light: #e6f1ff;
+$light: #e5e5e5;
 $dark: #111111;
 $body-bg: $dark;
 $body-color: $light;
@@ -31,6 +32,8 @@ $navbar-nav-link-padding-x: 1.5rem;
 $navbar-dark-color: rgba($light, .75);
 $navbar-dark-hover-color: $primary;
 $navbar-dark-active-color: $primary;
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$primary}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-dark-toggler-border-color: $primary;
 
 $carousel-indicator-width: 0.75rem;
 $carousel-indicator-height: 0.75rem;
@@ -52,15 +55,23 @@ $btn-close-opacity: 1;
 $btn-close-hover-opacity: .5;
 $btn-close-focus-opacity: .5;
 
-// Bootstrap and its default variables
+$accordion-border-color: $primary;
+$accordion-border-radius: 1rem;
+$accordion-button-active-bg: $primary;
+$accordion-button-active-color: $dark;
+
+$list-group-bg: transparent;
+$list-group-hover-bg: $light;
+$list-group-border-color: rgba($primary, .125);
+$list-group-color: $primary;
+$list-group-action-hover-color: $dark;
+$list-group-item-padding-y: 1rem;
+$list-group-item-padding-x: 2.5rem;
+
+  // Bootstrap and its default variables
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 body { counter-reset: item; }
-
-.video {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-}
 
 .navbar-collapse ul li a::before {
   counter-increment: item;
@@ -73,6 +84,16 @@ body { counter-reset: item; }
 
 .nav-link:last-child { padding-right: 0 !important; }
 
+#hero-section {
+  video {
+    z-index:1;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
+.hero-content { z-index: 2; }
+
 .carousel-indicators { bottom: -4rem; }
 
 .carousel-indicators li { border-radius: 100%; }
@@ -80,19 +101,41 @@ body { counter-reset: item; }
 .card {
   cursor: pointer;
   transition: 0.5s;
+  overflow: hidden;
 
-  :hover {
-    bottom: 20px;
-    color: $primary;
+  &:hover {
+    h3, p { color: $primary; }
+
+    img { filter: blur(0rem); }
   }
 
   img {
-    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.18) 0%, rgb(0, 0, 0) 45%);
-    --webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.18) 0%, rgb(0, 0, 0) 45%);
+    filter: blur(1rem);
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.18) 5%, rgb(0, 0, 0) 80%), url(https://grainy-gradients.vercel.app/noise.svg);
+    --webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.18) 5%, rgb(0, 0, 0) 80%), url(https://grainy-gradients.vercel.app/noise.svg);
+  }
+}
 
-    :hover {
-      filter: grayscale(1); /* IE6-9 */
-      -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-    }
+.modal-dialog {
+  width: auto;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  video {
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+  }
+}
+
+#collapseThree .list-group a:last-child { border-radius: 0 0 1rem 1rem; }
+
+a:link { text-decoration: none; }
+
+@media (max-width: 767.98px) {
+  #hero-section {
+    video { opacity: 0.5; }
   }
 }

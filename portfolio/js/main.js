@@ -1,3 +1,15 @@
+if (window.location.hash) {
+    // Store hash
+    const hash = window.location.hash;
+
+    // Select link with same hash in href
+    const link = $('a[href="' + hash +'"]');
+
+    // Remove and add active class
+    $('.nav-link.active').removeClass('active');
+    link.addClass('active');
+}
+
 // Add click events to nav-links and show-more-btn
 $('.nav-link, .show-more-btn').on('click', function(event) {
 

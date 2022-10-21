@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerttu Kamula - Portfolio</title>
+    <link rel="stylesheet" href="css/bs-custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous" defer></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.js" defer></script>
+    <script type="text/javascript" src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="col">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                    <div class="container-lg px-4 py-1">
+                        <a class="navbar-brand fw-semibold" href="portfolio.html">Kerttu Kamula</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#hero-section">Etusivu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#media-section">Media</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#webtekniikka-section">Web-tekniikka</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero section -->
+        <section class="py-5 position-relative overflow-hidden" id="hero-section">
+            <div class="d-flex min-vh-100">
+                <div class="container-lg px-4 py-1 d-flex align-items-center">
+                    <div class="col-12 col-md-6 col-lg-6 hero-content">
+                        <h1 class="display-3 fw-bold lh-1 mb-3">Moi, tää on Kertun portfolio!</h1>
+                        <p class="lead py-3">Tervetuloa Digitaalisen median perusteet -kurssin lopputyöhön, joka sisältää kaikki kurssin aikana tehdyt tehtävät.</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                            <a href="#media-section" class="show-more-btn btn btn-primary rounded-pill btn-lg px-4 me-md-2">Näytä lisää</a>
+                        </div>
+                    </div>
+                </div>
+                <video autoplay muted loop class="position-absolute w-100 min-vh-100" poster="assets/img/hero-loop-preview.png">
+                    <source src="assets/video/hero-loop.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        <!-- Media section -->
+        <section class="container-lg px-4 py-5 d-flex align-items-center min-vh-100" id="media-section">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="fw-bold fs-1">Media</h2>
+                </div>
+                <!-- Carousel -->
+                <div class="col-12 mt-3">
+                    <div id="media-carousel" class="carousel slide carousel-multi-item  d-none d-md-block" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card text-bg-dark" data-bs-toggle="modal" data-bs-target="#vektoriModal">
+                                            <img src="assets/img/vektori_1_thumbnail.png" class="card-img" alt="Vektoritehtävän esikatselukuva">
+                                            <div class="card-img-overlay d-flex align-content-end flex-wrap p-4">
+                                                <div>
+                                                    <p class="card-text mb-1"><small>Kuvitus</small></p>
+                                                    <h3 class="card-title fw-bolder">Vektori</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card text-bg-dark" data-bs-toggle="modal" data-bs-target="#videosprintti1Modal">
+                                            <img src="assets/img/videosprintti_1_thumbnail.png" class="card-img" alt="Videosprintti I -tehtävän esikatselukuva">
+                                            <div class="card-img-overlay d-flex align-content-end flex-wrap p-4">
+                                                <div>
+                                                    <p class="card-text mb-1"><small>Video</small></p>
+                                                    <h3 class="card-title fw-bolder">Videosprintti I</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card text-bg-dark" data-bs-toggle="modal" data-bs-target="#videosprintti2Modal">
+                                            <img src="assets/img/videosprintti_2_thumbnail.png" class="card-img" alt="Videosprintti II -tehtävän esikatselukuva">
+                                            <div class="card-img-overlay d-flex align-content-end flex-wrap p-4">
+                                                <div>
+                                                    <p class="card-text mb-1"><small>Video</small></p>
+                                                    <h3 class="card-title fw-bolder">Videosprintti II</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card text-bg-dark" data-bs-toggle="modal" data-bs-target="#afterEffectsModal">
+                                            <img src="assets/img/after_effects_thumbnail.png" class="card-img" alt="After Effects -tehtävän esikatselukuva">
+                                            <div class="card-img-overlay d-flex align-content-end flex-wrap p-4">
+                                                <div>
+                                                    <p class="card-text mb-1"><small>Video</small></p>
+                                                    <h3 class="card-title fw-bolder">After Effects</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card text-bg-dark" data-bs-toggle="modal" data-bs-target="#moniraitamiksausModal">
+                                            <img src="assets/img/moniraitamiksaus_thumbnail.png" class="card-img" alt="Moniraitamiksaustehtävän esikatselukuva">
+                                            <div class="card-img-overlay d-flex align-content-end flex-wrap p-4">
+                                                <div>
+                                                    <p class="card-text mb-1"><small>Video</small></p>
+                                                    <h3 class="card-title fw-bolder">Moniraitamiksaus</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card text-bg-dark" data-bs-toggle="modal" data-bs-target="#mikrofonitutkielmaModal">
+                                            <img src="assets/img/mikrofonitutkielma_thumbnail.png" class="card-img" alt="Mikrofonitutkielman esikatselukuva">
+                                            <div class="card-img-overlay d-flex align-content-end flex-wrap p-4">
+                                                <div>
+                                                    <p class="card-text mb-1"><small>Teksti</small></p>
+                                                    <h3 class="card-title fw-bolder">Mikrofonitutkielma</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#media-carousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></li>
+                            <li data-bs-target="#media-carousel" data-bs-slide-to="1" aria-label="Slide 2"></li>
+                        </ol>
+                    </div>
+                    <!-- Mobile carousel -->
+                    <div id="media-carousel-mobile" class="carousel slide carousel-multi-item d-md-none" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="col">
+                                    <div class="card text-bg-dark" data-bs-toggle="modal" data-bs-target="#vektoriModal">
+                                        <img src="assets/img/vektori_1_thumbnail.png" class="card-img" alt="Vektoritehtävän esikatselukuva">
+                                        <div class="card-img-overlay d-flex align-content-end flex-wrap p-4">
+                                            <div>
+                                                <p class="card-text mb-1"><small>Kuvitus</small></p>
+                                                <h3 class="card-title fw-bolder">Vektori</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col">
+                                    <div class="card text-bg-dark" data-bs-toggle="modal" data-bs-target="#videosprintti1Modal">
+                                        <img src="assets/img/videosprintti_1_thumbnail.png" class="card-img" alt="Videosprintti I -tehtävän esikatselukuva">
+                                        <div class="card-img-overlay d-flex align-content-end flex-wrap p-4">
+                                            <div>
+                                                <p class="card-text mb-1"><small>Video</small></p>
+                                                <h3 class="card-title fw-bolder">Videosprintti I</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col">
+                                    <div class="card text-bg-dark" data-bs-toggle="modal" data-bs-target="#videosprintti2Modal">
+                                        <img src="assets/img/videosprintti_2_thumbnail.png" class="card-img" alt="Videosprintti II -tehtävän esikatselukuva">
+                                        <div class="card-img-overlay d-flex align-content-end flex-wrap p-4">
+                                            <div>
+                                                <p class="card-text mb-1"><small>Video</small></p>
+                                                <h3 class="card-title fw-bolder">Videosprintti II</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col">
+                                    <div class="card text-bg-dark" data-bs-toggle="modal" data-bs-target="#afterEffectsModal">
+                                        <img src="assets/img/after_effects_thumbnail.png" class="card-img" alt="After Effects -tehtävän esikatselukuva">
+                                        <div class="card-img-overlay d-flex align-content-end flex-wrap p-4">
+                                            <div>
+                                                <p class="card-text mb-1"><small>Video</small></p>
+                                                <h3 class="card-title fw-bolder">After Effects</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col">
+                                    <div class="card text-bg-dark" data-bs-toggle="modal" data-bs-target="#moniraitamiksausModal">
+                                        <img src="assets/img/moniraitamiksaus_thumbnail.png" class="card-img" alt="Moniraitamiksaustehtävän esikatselukuva">
+                                        <div class="card-img-overlay d-flex align-content-end flex-wrap p-4">
+                                            <div>
+                                                <p class="card-text mb-1"><small>Video</small></p>
+                                                <h3 class="card-title fw-bolder">Moniraitamiksaus</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col">
+                                    <div class="card text-bg-dark" data-bs-toggle="modal" data-bs-target="#mikrofonitutkielmaModal">
+                                        <img src="assets/img/mikrofonitutkielma_thumbnail.png" class="card-img" alt="Mikrofonitutkielman esikatselukuva">
+                                        <div class="card-img-overlay d-flex align-content-end flex-wrap p-4">
+                                            <div>
+                                                <p class="card-text mb-1"><small>Teksti</small></p>
+                                                <h3 class="card-title fw-bolder">Mikrofonitutkielma</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#media-carousel-mobile" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></li>
+                            <li data-bs-target="#media-carousel-mobile" data-bs-slide-to="1" aria-label="Slide 2"></li>
+                            <li data-bs-target="#media-carousel-mobile" data-bs-slide-to="2" aria-label="Slide 3"></li>
+                            <li data-bs-target="#media-carousel-mobile" data-bs-slide-to="3" aria-label="Slide 4"></li>
+                            <li data-bs-target="#media-carousel-mobile" data-bs-slide-to="4" aria-label="Slide 5"></li>
+                            <li data-bs-target="#media-carousel-mobile" data-bs-slide-to="5" aria-label="Slide 6"></li>
+                        </ol>
+                    </div>
+                    <!-- Modal -->
+                    <article class="modal fade" id="vektoriModal" tabindex="-1" aria-labelledby="vektoriModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title fs-5" id="vektoriModalLabel">Vektori</h3>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body pt-0">
+                                    <img src="assets/img/vektori_1.png" alt="Marvin Marsilainen vektorikuvitus">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="modal fade" id="videosprintti1Modal" tabindex="-1" aria-labelledby="videosprintti1Modal" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title fs-5" id="videosprintti1ModalLabel">Videosprintti I</h3>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body pt-0">
+                                    <video poster="assets/img/videosprintti_1_preview.png" controls>
+                                        <source src="assets/video/videosprintti_1.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="modal fade" id="videosprintti2Modal" tabindex="-1" aria-labelledby="videosprintti2Modal" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title fs-5" id="videosprintti2ModalLabel">Videosprintti II</h3>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body pt-0">
+                                    <video poster="assets/img/videosprintti_2_preview.png" controls>
+                                        <source src="assets/video/videosprintti_2.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="modal fade" id="afterEffectsModal" tabindex="-1" aria-labelledby="afterEffectsModal" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title fs-5" id="afterEffectsModalLabel">After Effects</h3>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body pt-0">
+                                    <video poster="assets/img/after_effects_preview.png" controls>
+                                        <source src="assets/video/after_effects.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="modal fade" id="moniraitamiksausModal" tabindex="-1" aria-labelledby="moniraitamiksausModal" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title fs-5" id="moniraitamiksausModalLabel">Moniraitamiksaus</h3>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body pt-0">
+                                    <video poster="assets/img/moniraitamiksaus_preview.png" controls>
+                                        <source src="assets/video/moniraitamiksaus.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="modal fade" id="mikrofonitutkielmaModal" tabindex="-1" aria-labelledby="mikrofonitutkielmaModal" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title fs-5" id="mikrofonitutkielmaModalLabel">Mikrofonitutkielma</h3>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body pt-0">
+                                    <p>
+                                        Videokameraan suuntaavaksi mikrofoniksi sopii hyvin RØDE:n NTG2-haulikkomikrofoni
+                                        (hinta 229,00e Verkkokauppa.com), joka tarvittaessa toimii myös tavallisilla
+                                        AA-paristoilla, jolloin se lisää mikrofonin käytön joustavuutta.
+                                        NTG2-haulikkomikrofoni sopii erinomaisesti kameraan, koska siinä on suuntaava
+                                        superherttakuvio, eli se poimii tarkasti edestä (sekä sivuilta) tulevat äänet ja
+                                        vaimentaa hieman takaa tulevia ääniä. Koska NTG2-haulikkomikrofoni on
+                                        kondensaattorimikrofoni, se on herkkä myös hiljaiselle äänelle ja pystyy erottelemaan
+                                        äänet hyvin. NTG2-mikrofonissa on iso 20Hz – 20kHz taajuusvaste, jolloin se pystyy
+                                        poimimaan matalia ääniä ja hyvin korkeita ääniä.
+                                    </p>
+                                    <p>
+                                        Langattomaksi mikrofoniksi lavalle ja karaokeen käy Shuren langaton Beta 58A
+                                        (hinta 154,99e, Verkkokauppa.com). Se on dynaaminen mikrofoni, joten siinä ei
+                                        ole sisäistä kohinaa ja se on tarkoitettu kestämään, koska dynaamiset mikrofonit
+                                        ovat tyypillisesti tarkoitettu tilanteisiin, joissa niitä pidetään kädessä ja
+                                        ne saattaisivat tippua ja ottaa osumaa. Beta 58A:n suuntakuvio on superhertta ja
+                                        sen taajuusvaste on 50Hz – 16kHz, joten se sopii erinomaisesti keikkakäyttöön ja
+                                        haastaviin olosuhteisiin. Beta 58A -mikrofonia käytetään tyypillisesti laululle
+                                        ja puheelle, jonka vuoksi se käy hyvin lavan kuulutuksiin ja illan karaokeen.
+                                    </p>
+                                    <p class="pb-2">
+                                        10 hengen neuvotteluhuoneeseen toimii parhaiten mikrofoni, jolla on suuntakuviona
+                                        pallo. Tällöin mikrofoni poimii kaikista suunnista tulevat äänet yhtä hyvin ja
+                                        sopii näin ollen pyöreän pöydän keskelle useamman henkilön puheen poimimiseen.
+                                        Tällaiseen tarkoitukseen Shuren MX393/O (322e, Thomann) on hyvä mikrofoni, koska
+                                        se on tarkoitettu neuvotteluhuoneisiin ja sen suuntakuviona on pallo. Siinä on
+                                        50Hz – 17kHz taajuusvaste, joten se sopii hyvin puheelle. MX393/O on
+                                        kodensaattorimikrofoni, joten se on herkempi äänille, joka on hyvä, jos joku
+                                        pöydän äärellä puhuu hiljempaa kuin muut.
+                                    </p>
+                                    <hr class="">
+                                    <h3 class="fs-5 pt-2">Äänitystehtävät (Catrina Koskinen, Kerttu Kamula ja Suvi Mynttinen)</h3>
+                                    <h4 class="fs-6 pt-2">Kamera vs. ulkoinen mikrofoni</h4>
+                                    <p>
+                                        Ulkoisella mikrofonilla (haulikkomikrofoni) äänitetty ääni oli paljon selkeämpi
+                                        verrattuna kameran sisäiseen mikrofoniin. Ulkoinen mikrofoni toimii pidemmälläkin
+                                        etäisyydellä (jopa 8-10 metrin päästä pystyi saada selvää äänestä) ja vaimensi
+                                        paremmin taustamelun. Kameran sisäinen mikrofoni toimi läheltä, mutta kaukaa
+                                        äänitetty ääni ei kuulunut kunnolla. Sisäinen mikrofoni poimii mukaansa myös
+                                        huminaa ja sen, kun käsi liikkuu kameralla. Kameran sisäisellä mikrofonilla
+                                        äänitetty ääni kuulosti vaimeammalta ja kaikui enemmän. Kameran omaa mikrofonia
+                                        voisi käyttää esimerkiksi hyvin hallitussa tilassa, jossa taustalla ei ole
+                                        häiriöääniä, ja jos äänen lähde on lähellä kameraa.
+                                    </p>
+                                    <h4 class="fs-6 pt-2">Ulkoisen tallentimen käyttö</h4>
+                                    <p>
+                                        Ulkoista tallenninta käyttämällä kuulosti siltä, että ääni olisi ollut hieman
+                                        hiljaisempi/herkempi (varmaan johtui asetuksista ja mikrofoneista).
+                                    </p>
+                                    <p>
+                                        Käytimme normaalissa ja äänieristetyssä tilassa "podcast"-mikrofonia, jolla äänitetty
+                                        ääni kuulosti selkeältä. Normaalista tilasta taustalta tallentui kuitenkin
+                                        hieman puhetta ympäriltä ja muita ääniä. Molempien tilojen taustalla kuului myös
+                                        pientä kohinaa ääniraidassa. Ääniraitaa pitäisi hieman jälkikäsitellä, että
+                                        sieltä saisi pienet taustaäänet ja kohinan pois sekä puhujan puhinat tai maiskutukset
+                                        mikrofoniin voisi olla hyvä käsitellä myös pois.
+                                    </p>
+                                    <p>
+                                        Puomilla äänitetyssä raidassa normaalissa tilassa (aula, yksi puhuja), ääni
+                                        kuulosti selkeältä ja siitä sai hyvin selvää. Ääniraidalle tallentui taustalta
+                                        askelia, puhetta kauempaa sekä ilmastointien huminaa/kohinaa. Jälkikäsittelyssä
+                                        taustahäiriöt saisi varmasti hyvin pois.
+                                    </p>
+                                    <p>
+                                        Kahden henkilön dialogin sai kätevästi tallennettua "haastattelu"-mikrofonilla,
+                                        kun dialogi käytiin haastattelun muodossa. Taustalta ei erityisemmin tarttunut
+                                        häiriöääniä ja puhujien äänet kuulostivat selkeiltä. Tämänkin ääniraidan kohdalla
+                                        tarvittaessa voisi käsitellä puhujien puhinat ja maiskutukset pois. Ko. mikrofoni
+                                        ei kuitenkaan soveltuisi luonnollisen keskustelun taltiointiin, koska
+                                        äänittääkseen äänen tarpeeksi selkeästi, mikrofoniin piti puhua suoraan.
+                                    </p>
+                                    <p>
+                                        Kokeilimme useamman puhujan äänen tallentamista haulikkomikrofonilla, joka sai
+                                        kolmen puhujan äänet tallennettua vaikkakin melko vaimeina ja ääniraitaan
+                                        tallentui myös jonkin verran taustameteliä. Puomilla pystyi äänittämään useamman
+                                        henkilön dialogia näppärästi, mutta puheen lisäksi tavaroiden käsittelyn
+                                        äänet tallentuivat myös selkeästi mukaan.
+                                    </p>
+                                    <p>
+                                        Veden lorina hanasta kuulosti oudon lattealta haulikkomikrofonilla äänitettynä.
+                                        Ääni tuntui kaikuvan, mutta se saattoi johtua myös vain veden räiskymisestä lavuaariin.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Web-tekniikka section -->
+        <section class="container-lg px-4 py-5 d-flex align-items-center min-vh-100" id="webtekniikka-section">
+            <div class="row row-cols-1 row-cols-md-2 g-0 g-md-5 py-2">
+                <div class="col-12 col-md-6 col-lg-6 mt-2">
+                    <h2 class="fw-bold fs-1">Web-tekniikka</h2>
+                    <p class="lead py-3">
+                        Web-tekniikan tehtävien linkit avautuvat uudelle välilehdelle. Tehtäviä voi käydä tarkastamassa
+                        myös <a href="https://github.com/kamuke/Dm-web-tekniikat-2022" target="_blank">GitHubissa</a>.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 mt-2">
+                    <div class="accordion" id="accordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    jQuery
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                                <div class="list-group list-group-flush">
+                                    <a href="https://users.metropolia.fi/~veerakek/Digitaalisen_median_perusteet/Web-tekniikka/jquery1-3/" class="list-group-item list-group-item-action" target="_blank">
+                                        jQuery 1-3
+                                    </a>
+                                    <a href="https://users.metropolia.fi/~veerakek/Digitaalisen_median_perusteet/Web-tekniikka/jquery4/" class="list-group-item list-group-item-action" target="_blank">
+                                        jQuery 4
+                                    </a>
+                                    <a href="https://users.metropolia.fi/~veerakek/Digitaalisen_median_perusteet/Web-tekniikka/jquery5/" class="list-group-item list-group-item-action" target="_blank">
+                                        jQuery 5
+                                    </a>
+                                    <a href="https://users.metropolia.fi/~veerakek/Digitaalisen_median_perusteet/Web-tekniikka/jquery-ajax/" class="list-group-item list-group-item-action" target="_blank">
+                                        jQuery + AJAX
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    BootStrap
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                                <div class="list-group list-group-flush">
+                                    <a href="https://users.metropolia.fi/~veerakek/Digitaalisen_median_perusteet/Web-tekniikka/bootstrap1/" class="list-group-item list-group-item-action" target="_blank">
+                                        Bootstrap 1
+                                    </a>
+                                    <a href="https://users.metropolia.fi/~veerakek/Digitaalisen_median_perusteet/Web-tekniikka/bootstrap2/" class="list-group-item list-group-item-action" target="_blank">
+                                        Bootstrap 2
+                                    </a>
+                                    <a href="https://users.metropolia.fi/~veerakek/Digitaalisen_median_perusteet/Web-tekniikka/bootstrap_scss/" class="list-group-item list-group-item-action" target="_blank">
+                                        Bootstrap kustomointi / SCSS
+                                    </a>
+                                    <a href="https://themes.getbootstrap.com/preview/?theme_id=9177" class="list-group-item list-group-item-action" target="_blank">
+                                        Bootstrap kustomointi / SCSS: Alkuperäinen
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    WordPress
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                                <div class="list-group list-group-flush">
+                                    <a href="https://users.metropolia.fi/~veerakek/wordpress/" class="list-group-item list-group-item-action" target="_blank">
+                                        WordPress-sivu
+                                    </a>
+                                    <a href="https://github.com/kamuke/Dm-web-tekniikat-2022/tree/main/wordpress/wp-content/themes/customtheme" class="list-group-item list-group-item-action" target="_blank">
+                                        WordPress-teeman koodi
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container-lg px-4 py-3">
+            <p>© 2022 Kerttu Kamula</p>
+        </div>
+    </footer>
+</body>
+</html>
