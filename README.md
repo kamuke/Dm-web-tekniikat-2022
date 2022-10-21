@@ -1,1 +1,1 @@
-# Dm-web-tekniikat-2022
+# Metropolian ammattikorkeakoulun tieto- ja viestintätekniikan Digitaalisen median perusteet -kurssin web-tekniikan tehtävät.
