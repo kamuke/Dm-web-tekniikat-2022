@@ -1,1 +1,1 @@
-# Dm-web-tekniikat-2022
+# Digitaalisen median perusteet -kurssin web-tekniikan tehtävät
