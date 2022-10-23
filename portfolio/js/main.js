@@ -1,15 +1,3 @@
-if (window.location.hash) {
-    // Store hash
-    const hash = window.location.hash;
-
-    // Select link with same hash in href
-    const link = $('a[href="' + hash +'"]');
-
-    // Remove and add active class
-    $('.nav-link.active').removeClass('active');
-    link.addClass('active');
-}
-
 // Add click events to nav-links and show-more-btn
 $('.nav-link, .show-more-btn').on('click', function(event) {
 
@@ -49,5 +37,26 @@ $(window).scroll(function () {
         }
     });
 });
+
+// Animate hero video when hovering
+$('#hero-section').on('mouseover', function() {
+    $('#hero-video').animate( {
+        left: (Math.random() * 50 + 'px'),
+        top: (Math.random() * 50 + 'px')
+    }, 500);
+});
+
+// Check if url has # and then add active class to the nav link
+if (window.location.hash) {
+    // Store hash
+    const hash = window.location.hash;
+
+    // Select link with same hash in href
+    const link = $('a[href="' + hash +'"]');
+
+    // Remove and add active class
+    $('.nav-link.active').removeClass('active');
+    link.addClass('active');
+}
 
 

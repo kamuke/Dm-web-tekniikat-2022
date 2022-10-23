@@ -8436,11 +8436,27 @@ body {
   .card:hover h3, .card:hover .h3, .card:hover p {
     color: #D0FF26; }
   .card:hover img {
-    filter: blur(0rem); }
+    -webkit-filter: blur(0rem);
+    animation-name: imgBlur;
+    animation-duration: 0.5s; }
   .card img {
-    filter: blur(1rem);
+    animation-name: imgBlurReverse;
+    animation-duration: 0.5s;
+    -webkit-filter: blur(1rem);
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.18) 5%, black 80%), url(https://grainy-gradients.vercel.app/noise.svg);
-    --webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.18) 5%, rgb(0, 0, 0) 80%), url(https://grainy-gradients.vercel.app/noise.svg); }
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.18) 5%, black 80%), url(https://grainy-gradients.vercel.app/noise.svg); }
+
+@-webkit-keyframes imgBlur {
+  from {
+    filter: blur(1rem); }
+  to {
+    filter: blur(0rem); } }
+
+@-webkit-keyframes imgBlurReverse {
+  from {
+    filter: blur(0rem); }
+  to {
+    filter: blur(1rem); } }
 
 .modal-dialog {
   width: auto; }
