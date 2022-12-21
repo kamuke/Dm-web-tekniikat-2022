@@ -1,1 +1,1 @@
-# School assignments for Basics of digital media-course in Metropolia UAS.
+# School assignments for Basics of digital media and web technologies course in Metropolia UAS.
